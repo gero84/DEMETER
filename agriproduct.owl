@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/georg/ontologies/2020/3/untitled-ontology-120#"
+     xml:base="http://www.semanticweb.org/georg/ontologies/2020/3/untitled-ontology-120"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://github.com/gero84/DEMETER/blob/master/agriproduct.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#manufacturer -->
+
+    <owl:ObjectProperty rdf:about="http://foodie-cloud.com/model/foodie#manufacturer"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#nutrientAmount -->
+
+    <owl:ObjectProperty rdf:about="http://foodie-cloud.com/model/foodie#nutrientAmount"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#nutrientProduct -->
+
+    <owl:ObjectProperty rdf:about="http://foodie-cloud.com/model/foodie#nutrientProduct"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#productKind -->
+
+    <owl:ObjectProperty rdf:about="http://foodie-cloud.com/model/foodie#productKind"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#productQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://foodie-cloud.com/model/foodie#productQuantity"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#safetyPeriod -->
+
+    <owl:ObjectProperty rdf:about="http://foodie-cloud.com/model/foodie#safetyPeriod"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#solventQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://foodie-cloud.com/model/foodie#solventQuantity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#description -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#description"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#nutrientMeasure -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#nutrientMeasure"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#nutrientName -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#nutrientName"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#price -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#price"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#productName -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#productName"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#productType -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#productType"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#safetyInstructions -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#safetyInstructions"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#storageHandling -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#storageHandling"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#AnyFeature -->
+
+    <owl:Class rdf:about="http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#AnyFeature"/>
+    
+
+
+    <!-- http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#FeatureType -->
+
+    <owl:Class rdf:about="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#FeatureType"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#Product -->
+
+    <owl:Class rdf:about="http://foodie-cloud.com/model/foodie#Product">
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#AnyFeature"/>
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#FeatureType"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#manufacturer"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#productKind"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#productName"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#productType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#description"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#price"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#safetyInstructions"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#storageHandling"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="en">Product</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#ProductNutrients -->
+
+    <owl:Class rdf:about="http://foodie-cloud.com/model/foodie#ProductNutrients">
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#AnyFeature"/>
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#FeatureType"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#nutrientProduct"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#nutrientAmount"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#nutrientName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#nutrientMeasure"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="en">ProductNutrients</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#ProductPreparation -->
+
+    <owl:Class rdf:about="http://foodie-cloud.com/model/foodie#ProductPreparation">
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#AnyFeature"/>
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#FeatureType"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#productQuantity"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#safetyPeriod"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#solventQuantity"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="en">ProductPreparation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Temperature -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_air_temperature_and_specific_humidity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_air_temperature_and_specific_humidity">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_eastward_sea_water_velocity_and_salinity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_eastward_sea_water_velocity_and_salinity"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_eastward_wind_and_geopotential_height -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_eastward_wind_and_geopotential_height">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_eastward_wind_and_specific_humidity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_eastward_wind_and_specific_humidity"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_northward_sea_water_velocity_and_salinity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_northward_sea_water_velocity_and_salinity"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_northward_wind_and_geopotential_height -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_northward_wind_and_geopotential_height">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_northward_wind_and_specific_humidity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_northward_wind_and_specific_humidity"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_upward_air_velocity_and_specific_humidity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#product_of_upward_air_velocity_and_specific_humidity"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
