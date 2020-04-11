@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/georg/ontologies/2020/3/untitled-ontology-141#"
+     xml:base="http://www.semanticweb.org/georg/ontologies/2020/3/untitled-ontology-141"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://github.com/gero84/DEMETER/blob/master/animal.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TAXRANK_1000000 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/TAXRANK_1000000"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#hasID -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4agri#hasID"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#hasMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4agri#hasMember"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4agri#isLocatedIn"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4agri#isMemberOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#livestockNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#livestockNumber"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#livestockType -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#livestockType"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#hasBirthDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4agri#hasBirthDate"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#hasDeathDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4agri#hasDeathDate"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#hasName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/saref4agri#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype -->
+
+    <owl:Class rdf:about="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype"/>
+    
+
+
+    <!-- http://inspire.ec.europa.eu/schemas/af/3.0#FarmAnimalSpecies -->
+
+    <owl:Class rdf:about="http://inspire.ec.europa.eu/schemas/af/3.0#FarmAnimalSpecies">
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#livestockNumber"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#livestockType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="en">FarmAnimalSpecies</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TAXRANK_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TAXRANK_0000000"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#Animal -->
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#Animal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/TAXRANK_1000000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TAXRANK_0000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#isLocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#isMemberOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4agri#AnimalGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#hasID"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/saref4agri#ID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#hasBirthDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#hasDeathDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An individual and identifiable living organism that feeds on organic matter, typically having specialized sense organs and nervous system and able to respond rapidly to stimuli.</rdfs:comment>
+        <rdfs:label>Animal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#AnimalGroup -->
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#AnimalGroup">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#hasMember"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4agri#Animal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#isLocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4agri#hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A collection of one or multiple animals.</rdfs:comment>
+        <rdfs:label>Animal Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4agri#ID -->
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4agri#ID"/>
+    
+
+
+    <!-- https://w3id.org/saref#FeatureOfInterest -->
+
+    <owl:Class rdf:about="https://w3id.org/saref#FeatureOfInterest"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
