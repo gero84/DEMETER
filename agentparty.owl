@@ -1,1 +1,164 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/georg/ontologies/2020/3/untitled-ontology-145#"
+     xml:base="http://www.semanticweb.org/georg/ontologies/2020/3/untitled-ontology-145"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://github.com/gero84/DEMETER/blob/master/agentparty.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/member -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/member"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype -->
+
+    <owl:Class rdf:about="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype"/>
+    
+
+
+    <!-- http://portele.de/ont/inspire/baseInspire#RelatedParty -->
+
+    <owl:Class rdf:about="http://portele.de/ont/inspire/baseInspire#RelatedParty">
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/member"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://portele.de/ont/inspire/baseInspire#RelatedParty -->
+
+    <owl:NamedIndividual rdf:about="http://portele.de/ont/inspire/baseInspire#RelatedParty">
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#NCName">RelatedParty</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://portele.de/ont/inspire/baseInspire#responsibleParty -->
+
+    <owl:NamedIndividual rdf:about="http://portele.de/ont/inspire/baseInspire#responsibleParty">
+        <skos:notation rdf:datatype="http://www.w3.org/2001/XMLSchema#NCName">responsibleParty</skos:notation>
+        <skos:definition xml:lang="en">The responsible party.</skos:definition>
+        <skos:prefLabel xml:lang="en">responsible Party</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://portele.de/ont/inspire/baseInspire#RelatedParty">
+        <skos:prefLabel xml:lang="en">related party</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">NOTE 1 A party, typically an individual person, acting as a general point of contact for a resource can be specified without providing any particular role.</skos:scopeNote>
+        <skos:definition xml:lang="en">An organisation or a person with a role related to a resource.</skos:definition>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
 
