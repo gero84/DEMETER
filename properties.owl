@@ -1,1 +1,191 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/georg/ontologies/2020/3/untitled-ontology-148#"
+     xml:base="http://www.semanticweb.org/georg/ontologies/2020/3/untitled-ontology-148"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://github.com/gero84/DEMETER/blob/master/properties.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#propertyType -->
+
+    <owl:ObjectProperty rdf:about="http://foodie-cloud.com/model/foodie#propertyType"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#quantitativeProperty -->
+
+    <owl:ObjectProperty rdf:about="http://foodie-cloud.com/model/foodie#quantitativeProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#analysisDate -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#analysisDate"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#nonQuantitativeProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#nonQuantitativeProperty"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#propertyName -->
+
+    <owl:DatatypeProperty rdf:about="http://foodie-cloud.com/model/foodie#propertyName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Codelist -->
+
+    <owl:Class rdf:about="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Codelist"/>
+    
+
+
+    <!-- http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype -->
+
+    <owl:Class rdf:about="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype"/>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#PropertyType -->
+
+    <owl:Class rdf:about="http://foodie-cloud.com/model/foodie#PropertyType">
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#propertyType"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#quantitativeProperty"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#analysisDate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#propertyName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://foodie-cloud.com/model/foodie#nonQuantitativeProperty"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="en">PropertyType</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://foodie-cloud.com/model/foodie#PropertyTypeValue -->
+
+    <owl:Class rdf:about="http://foodie-cloud.com/model/foodie#PropertyTypeValue">
+        <rdfs:subClassOf rdf:resource="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Codelist"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">PropertyTypeValue</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#SensorDataSheet -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensorDataSheet">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+        <dc:source>http://www.w3.org/2005/Incubator/ssn/</dc:source>
+        <rdfs:comment>A data sheet records properties of a sensor.  A data sheet might describe for example the accuracy in various conditions, the power use, the types of connectors that the sensor has, etc.  
+
+Generally a sensor&apos;s properties are recorded directly (with hasMeasurementCapability, for example), but the data sheet can be used for example to record the manufacturers specifications verses observed capabilites, or if more is known than the manufacturer specifies, etc.  The data sheet is an information object about the sensor&apos;s properties, rather than a direct link to the actual properties themselves.</rdfs:comment>
+        <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
+        <rdfs:label>Sensor Data Sheet</rdfs:label>
+        <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Sensor#Measuring</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
