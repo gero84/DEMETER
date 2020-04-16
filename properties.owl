@@ -8,7 +8,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="https://github.com/gero84/DEMETER/blob/master/properties.owl"/>
+    <owl:Ontology rdf:about="https://w3id.org/DEMETER_ontologies/properties">
+        <owl:versionIRI rdf:resource="https://github.com/gero84/DEMETER_ontologies/blob/master/properties.owl"/>
+    </owl:Ontology>
     
 
 
